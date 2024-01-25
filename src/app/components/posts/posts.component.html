@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-6 offset-2" *ngFor="let post of postsArr">
+        <div class="card">
+            <div class="card-header">
+                <h5>
+                    {{post.title}}
+                </h5>
+            </div>
+            <div class="card-body d-flex justify-content-between">
+                <p class="mt-5 mr-2">
+                    <strong>Album Id : </strong>{{post.albumId}}
+                    <strong>Post Id : </strong>{{post.id}}
+                </p>
+                <div class="text-right">
+                    <img [src]="post.thumbnailUrl" alt="">
+                </div>
+                <p class="ml-2 text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum suscipit et iste similique explicabo consequuntur deserunt atque ab minima temporibus rerum totam, aut odie consectetur repudiandae repellendus  a sint explicabo vitae voluptates veniam eveniet doloremque. Quia quam voluptatum nihil.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
