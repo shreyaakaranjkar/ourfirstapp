@@ -1,13 +1,13 @@
 <div class="row">
     <div class="col-8 offset-2">
-        <table class="table table-bordered table-striped">
-            <thead>
+        <table class="table table-bordered table-striped tablebg text-center">
+            <thead class="bg-dark text-white text-center">
                 <tr>
-                    <th>Sr No</th>
-                    <th>User Id</th>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Completed</th>
+                    <th><h4>Sr No</h4></th>
+                    <th><h4>User Id</h4></th>
+                    <th><h4>Id</h4></th>
+                    <th><h4>Title</h4></th>
+                    <th><h4>Completed</h4></th>
                 </tr>
             </thead>
             <tbody>
@@ -15,9 +15,10 @@
                     <td>{{i+1}}</td>
                     <td>{{task.userId}}</td>
                     <td>{{task.id}}</td>
-                    <td>{{task.title}}</td>
-                    <td [ngStyle]="{
-                        color : task.completed ? 'green' : 'red'}">{{task.completed}}</td>
+                    <td><strong>{{task.title}}</strong></td>
+                    <td [ngClass]="{
+                        'text-success' : task.completed,
+                        'text-danger' : !task.completed}"><strong>{{task.completed}}</strong></td>
                 </tr>
             </tbody>
         </table>
