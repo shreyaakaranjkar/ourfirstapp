@@ -1,0 +1,84 @@
+<!-- <ul class="nav nav-pills">
+    <li class="nav-item" (click)="selectedItem('Angular')">
+        <a href="#" class="nav-link" [ngClass]="
+        {
+            active : framework.toLowerCase().includes('angular')
+        }">Angular</a>
+    </li>
+    <li class="nav-item" (click)="selectedItem('Javascript')">
+        <a href="#" class="nav-link"
+        [ngClass]="
+        {
+            active : framework.toLowerCase().includes('javascript')
+        }">Javascript</a>
+    </li>
+    <li class="nav-item" (click)="selectedItem('Bootstrap')">
+        <a href="#" class="nav-link"
+        [ngClass]="
+        {
+            active : framework.toLowerCase().includes('bootstrap')
+        }">Bootstrap</a>
+    </li>
+</ul>
+
+
+<div class="tabs-body">
+    <div class="card" >
+        <div class="card-body" *ngIf="framework.toLowerCase().includes('angular')">
+            <strong>Angular</strong>
+            <p>Angular 14 has improved performance.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body" *ngIf="framework.toLowerCase().includes('javascript')">
+            <strong>Javascript</strong>
+            <p>Javascript was written by Brenden Eich.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body" *ngIf="framework.toLowerCase().includes('bootstrap')">
+            <strong>Bootstrap</strong>
+            <p>Mark Otto and Jacob Thornton at Twitter.</p>
+        </div>
+    </div>
+</div> -->
+
+<hr>
+<ul class="nav nav-pills">
+
+    <li class="nav-item" *ngFor="let skill of skills" (click)="framework= skill.title">
+        <a href="javascript:;" class="nav-link" [ngClass]="
+        {
+            active : framework.toLowerCase().includes(skill.title)
+        }">{{skill.title}}</a>
+    </li>
+</ul>
+
+<div class="tabs-body">
+    <ng-container *ngFor="let skill of skills">
+    <div class="card" *ngIf="framework.toLowerCase().includes(skill.title)">
+        <div class="card-body" [innerHTML]="skill.content">
+            <!-- <strong>{{skill.title}}</strong> -->
+            <!-- <p>{{skill.content}}</p> -->
+        </div>
+    </div>
+</ng-container>
+</div>
+
+<h3>Using Switch Case - *ngSwitch</h3>
+<div [ngSwitch]="numvalue">
+    <p *ngSwitchCase="5">
+        The value is 5
+    </p>
+
+    <p  *ngSwitchCase="10">
+        The value is 10
+    </p>
+      <p  *ngSwitchCase="15">
+        The value is 15
+    </p>
+  <p *ngSwitchDefault=>
+        The value is anything apart from 5,10 and 15
+    </p>
+    
+</div>

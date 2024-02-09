@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ourfirstapp';
+  constructor(private eleRef : ElementRef){}
+
+  getMsg :string='Message From Parent to Child';
+
+  getMsgFromChild(eve : string){
+    console.log(eve)
+  }
+
+
 }

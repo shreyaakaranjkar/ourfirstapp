@@ -3,20 +3,20 @@
 <p>Product Id is <strong>{{productId}}</strong></p>
 
 <hr>
-<!-- <h4>Skills</h4>
+<h4>Skills</h4>
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let skill of skills">
         {{skill}}
     </li>
-</ul> -->
+</ul>
 
-<!-- <p [ngStyle]="{'background-color' : isProductAvailable ? 'orange' : 'gray'}">
+<p [ngStyle]="{'background-color' : isProductAvailable ? 'orange' : 'gray'}">
 The Product is available</p>
 
 <p [ngClass]="{
     'text-white' : isProductAvailable,
     'p-4' : isProductAvailable
-}">The Product is available</p> -->
+}">The Product is available</p>
 
 <!-- using ng-template -->
 <div *ngIf="isProductAvailable; else elseBlock">The Product is available</div>

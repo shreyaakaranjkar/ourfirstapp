@@ -8,6 +8,9 @@ import { SkillsetsComponent } from './components/skillsets/skillsets.component';
 import { StudentsComponent } from './components/students/students.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { TypicodetaskComponent } from './components/typicodetask/typicodetask.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { ChildComponent } from './components/child/child.component';
+import { toLowerCaseDirective } from './directives/tolowercase.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { TypicodetaskComponent } from './components/typicodetask/typicodetask.co
     SkillsetsComponent,
     StudentsComponent,
     PostsComponent,
-    TypicodetaskComponent
+    TypicodetaskComponent,
+    TabsComponent,
+    ChildComponent,
+    toLowerCaseDirective
   ],
   imports: [
     BrowserModule

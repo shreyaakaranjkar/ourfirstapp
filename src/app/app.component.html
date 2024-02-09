@@ -1,11 +1,30 @@
-<h1 class="bg-primary text-white p-3">Angular Task</h1>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+</div> -->
 
 <hr>
-<!-- <app-product></app-product>
+ <app-product></app-product>
 <hr>
 <app-skillsets></app-skillsets>
 <hr>
 <app-students></app-students>
-<app-posts></app-posts> -->
+<app-posts></app-posts>
 
-<app-typicodetask></app-typicodetask>
+<div class="container">
+<h1 class="bg-success text-white p-3 text-center">Angular Task</h1>
+
+    <app-typicodetask></app-typicodetask>
+
+    <app-tabs></app-tabs> 
+    
+    <!-- Input - child receive data from parent 
+output child event send --receive parent function -->
+    <app-child [sendMsgFromParent]="getMsg" (sendMsgToParent)="getMsgFromChild($event)"></app-child>
+    <hr>
+    <!-- //tolowercase directive -->
+    <!-- <input type="text" class="form-control" tolowercase> -->
+</div>
